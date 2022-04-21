@@ -1,7 +1,7 @@
-# filename = input('File name: ')
+filename = input('File name: ')
 
-# with open(filename,'r') as f:
-with open('pantip_read_20181015_20181222.csv','r') as f:
+with open(filename,'r') as f:
+# with open('pantip_read_20181015_20181222.csv','r') as f:
     name = f.readline().strip().split(",")
     # Sort by Web
     view = {k:[] for k in name} 
@@ -92,9 +92,7 @@ def c8():
 
 def c9():
     revSort = {i:sorted(user[i],reverse=True) for i in user}
-    print(revSort)
     perID = {i:((revSort[i][0]+revSort[i][1])/sum(revSort[i]))*100 for i in revSort}
-    print(perID)
     # print(revSort['pf4unt4gz1T3NV1j7f7y'])
     count = 0
     for i in perID:
